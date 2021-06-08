@@ -1,0 +1,154 @@
+body{
+    margin:0;
+    padding:0;
+    min-width: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {display: flex;}
+
+.logo {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+i.fa.fa-bookmark {
+    color: lightblue;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: 0;
+    font-size: 80px;
+}
+
+#first-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#workshop, #specialties, #journal, #origins {
+    width: calc(18.8% - 20px);
+    background-color: rgb(228, 210, 186);
+    text-align: center;
+    margin: 10px;
+}
+
+#workshop p, #specialties p, #journal p, #origins p {
+    margin: 10px;
+    word-break:normal;
+    color: grey;
+    font-style: italic;
+}
+
+#second-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(246, 180, 105);
+    border-radius: 50%;
+    text-align: center;
+    margin: 22px;
+}
+
+#third-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#col-1 {
+    text-align: center;
+    max-width: 50%;
+}
+
+#col-2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(248, 238, 224);
+}
+
+#col-2 div{
+    text-align: center;
+    margin: 0 100px 0 100px;
+}
+
+#col-2 h4 {color: grey;}
+#col-2 p {font-style: italic;}
+
+#fourth-line {
+    text-align: center;
+    margin: 10px;
+}
+
+#fourth-line img {
+    max-width:100%;
+    max-height:100%;
+}
+
+footer {
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width:1024px){
+    #first-line {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #workshop, #specialties, #journal, #origins {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    } 
+
+    #col-1 {display: none;} 
+    
+    #col-2, #fourth-line {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 707px){
+    #second-line {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .dot {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px){
+    #second-line, #col-2 h1, #col-2 h2, #col-2 h4 {
+        display: none;
+    }
+
+    #col-2 p {
+       justify-content: start;
+    }
+    .logo{
+        flex:none;
+        margin-left: 0;
+    }
+    i.fa.fa-bookmark {
+        margin-left : -100%;
+        flex:none;
+    }
+}
